@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using TravelMoney.Services;
 namespace TravelMoney.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,5 +16,10 @@ namespace TravelMoney.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void ButtonGoogle_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new GoogleLoginCsPage());
+        }
+    }
 }

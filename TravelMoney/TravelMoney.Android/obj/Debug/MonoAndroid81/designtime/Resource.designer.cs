@@ -2364,7 +2364,7 @@ namespace TravelMoney.Droid
 			public const int design_snackbar_background = 2131296347;
 			
 			// aapt resource value: 0x7F010002
-			public const int Female User = 2130771970;
+			public const int FemaleUser = 2130771970;
 			
 			// aapt resource value: 0x7F090054
 			public const int ic_audiotrack_dark = 2131296340;
@@ -2901,7 +2901,7 @@ namespace TravelMoney.Droid
 			public const int Logo = 2130771971;
 			
 			// aapt resource value: 0x7F010004
-			public const int Male User = 2130771972;
+			public const int MaleUser = 2130771972;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;

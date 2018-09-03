@@ -4,9 +4,8 @@
              x:Class="TravelMoney.Views.LoginPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Login With Google+"
+                    Clicked="ButtonGoogle_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="TravelMoney.Views.GoogleProfile">
+    <ContentPage.Content>
+        <StackLayout>
+            <ffimageloading:CachedImage x:Name="Image"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center"
+                                        LoadingPlaceholder="Arduino.png"
+                                        Source="{Binding Image}"></ffimageloading:CachedImage>
+            <Label Text="{Binding Name}"  />
+            <Label Text="{Binding Gender}" />            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

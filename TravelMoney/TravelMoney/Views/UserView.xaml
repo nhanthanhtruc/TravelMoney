@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"             
+             x:Class="TravelMoney.Views.UserView">
+    <ContentPage.Content>
+        <ListView x:Name="ListViewUser"
+                  HasUnevenRows="True"
+                  SelectionMode="None"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="OnMore"
+                                      CommandParameter="{Binding .}"
+                                      Text="Add" />
+                            <MenuItem Clicked="OnDelete"
+                                      CommandParameter="{Binding .}"
+                                      Text="Delete"
+                                      IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                        <Grid VerticalOptions="Center"
+                              Padding="10,5"
+                              CompressedLayout.IsHeadless="True">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>                            
+                            <ffimageloading:CachedImage HorizontalOptions="Center"
+                                                        VerticalOptions="Center"
+                                                        Source="FemaleUser.png">
+                                <ffimageloading:CachedImage.Triggers>
+                                    <DataTrigger TargetType="ffimageloading:CachedImage"
+                                                 Binding="{Binding Female}"
+                                                 Value="False">
+                                        <Setter Property="Source"
+                                                Value="MaleUser.png" />
+                                    </DataTrigger>
+                                </ffimageloading:CachedImage.Triggers>
+                            </ffimageloading:CachedImage>
+                            <StackLayout Grid.Column="1">
+                                <Label Text="{Binding Name}"
+                                       FontSize="Medium"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />                                
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

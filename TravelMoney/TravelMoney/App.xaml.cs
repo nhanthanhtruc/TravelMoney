@@ -14,7 +14,7 @@ namespace TravelMoney
             InitializeComponent();
 
 
-            MainPage = new LoginPage();
+            MainPage = new NavigationPage(new UserView());
         }
 
         protected override void OnStart()
